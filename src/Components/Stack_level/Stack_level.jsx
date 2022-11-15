@@ -147,16 +147,16 @@ console.log(userinfo.referrer);
                             </div>
                             <div className="d-flex S_ssss">
                                 <p className='s_l_p'>Address:</p>
-                                <p className=' aliment width_adjust3'>http://b.thedfs.live/Dashboard/Home</p>
+                                <p className=' aliment width_adjust3'>https://w-bsg.netlify.app/Dashboard/Home</p>
                                 <span style={{ marginTop: "-0.8rem" }}>
 
                                     <CopyToClipboard onCopy={() => setcopyTest(true)} text={
                                         refrealAdress == "0x0000000000000000000000000000000000000000" ?
-                                            `https://b.thedfs.live/Dashboard/Home`
+                                            `https://w-bsg.netlify.app/Dashboard/Home`
 
 
                                             :
-                                            `https://b.thedfs.live/Dashboard/Home?referrallink=${acc}`
+                                            `https://w-bsg.netlify.app/Dashboard/Home?referrallink=${acc}`
 
 
 
