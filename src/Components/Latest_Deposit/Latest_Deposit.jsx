@@ -154,7 +154,7 @@ function Latest_Deposit() {
 	return (
 		<div className='main_latest_deposite'>
 
-			<h3 className='text-white ps-3 mb-3'>Latest Deposit</h3>
+			<h3 className='text-white pstartt mb-3'>Latest Deposit</h3>
 			<RepetationComponent />
 			<div className="main_deposit my-5">
 				<div className="second_deposit">

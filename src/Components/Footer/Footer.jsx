@@ -3,6 +3,8 @@ import "./Footer.css";
 import LOGO1 from "../Assets/LOGO2.png"
 
 import { BsTwitter } from "react-icons/bs";
+import { BsTelegram } from "react-icons/bs";
+import { FiBluetooth } from "react-icons/fi";
 import { FaDiscord } from "react-icons/fa";
 import { FaTwitch } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
@@ -68,9 +70,9 @@ function Footer() {
 			</div>	
 		</div>
 		<div className="ftKI flexC">
-			<a href="https://wyzthscan.org/" className="ftKIa"><img src={ftI04}/></a>
-			<a href="https://wyzthscan.org/" className="ftKIa"><img src={wyscan} style={{width:"40px"}}/></a>
-			<a href="https://twitter.com/BSGSplitGame" className="ftKIa"><img src={ftI01}/></a>
+			<a href="https://wyzthscan.org/" className="ftKIa"><BsTelegram /></a>
+			<a href="https://wyzthscan.org/" className="ftKIa"><FiBluetooth /></a>
+			<a href="https://twitter.com/BSGSplitGame" className="ftKIa"><BsTwitter /></a>
 		</div>
 	</div>
     </div>

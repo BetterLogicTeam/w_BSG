@@ -19,7 +19,7 @@ function Deposite_m(props) {
     let [depositandintrest, setdepositandintrest] = useState()
 
     const confirmDeposit = async () => {
-        if ((parseInt(amount) > 49 && parseInt(amount) <= 10000)) {
+        if ((parseInt(amount) > 49 && parseInt(amount) <= 2000)) {
             let maxDeposit = Web3.utils.fromWei(userInfo.maxDeposit)
             if ((parseInt(maxDeposit) == 0 || parseInt(amount) >= parseInt(maxDeposit))) {
                 if (parseInt(amount) % 50 === 0) {
@@ -41,7 +41,7 @@ function Deposite_m(props) {
             }
         }
         else {
-            toast.error('value must be greater then 50 and less then 10000 ')
+            toast.error('value must be greater then 50 and less then 2000 ')
         }
     }
     const getUserDetail = async () => {
@@ -73,7 +73,7 @@ function Deposite_m(props) {
     const deposit = async (e) => {
         setAmount(e.target.value)
         console.log('what is deposit value', typeof parseInt(e.target.value))
-        let value = parseInt(e.target.value) / 100 * 4;
+        let value = parseInt(e.target.value) / 100 * 20;
         value = parseInt(e.target.value) + value
         setdepositandintrest(value)
     }
@@ -104,7 +104,7 @@ function Deposite_m(props) {
                         <div className="row">
                             <div className="col-lg-8">
                                 <input type="number" min="50" max="2000" value={amount} onChange={deposit} className='input_modal' placeholder='50' />
-                                <p className='modal_pa'>Minimum deposit 50 DAI. A ratio of 50 max 10000</p>
+                                <p className='modal_pa'>Minimum deposit 50 DAI. A ratio of 50 max 2000</p>
                             </div>
                             <div className="col-lg-4">
                                 <div className="d-flex gsa mt-2">
@@ -126,7 +126,7 @@ function Deposite_m(props) {
                                             <p className='sub_para'>Deposit</p>
                                         </div>
                                         <div className="col-lg-4 col-4">
-                                            <p className='text-white mb-0'>4%</p>
+                                            <p className='text-white mb-0'>20%</p>
                                             <p className='sub_para'>Each cycle</p>
                                         </div>
                                         <div className="col-lg-4 col-4">
@@ -135,8 +135,8 @@ function Deposite_m(props) {
                                         </div>
 
                                     </div>
-                                    <p className='text-white'>7 days per cycle. 4% per cycle
-                                        You will have to redeposit every time after each cycle. It will have to be either the same amount or bigger amount. Every 2 cycle you deposit 1 extra days will be added without extra rewards. Maximum 45 days.</p>
+                                    <p className='text-white'>10 days per cycle. 20% per cycle
+                                        You will have to redeposit every time after each cycle. It will have to be either the same amount or bigger amount. Every 2 cycle you deposit 1 extra days will be added without extra rewards. Maximum 50 days.</p>
                                 </div>
                             </div>
                         </div>

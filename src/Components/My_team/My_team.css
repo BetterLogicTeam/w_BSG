@@ -11,6 +11,20 @@
     height: 100vh;
 }
 
+.pstartt{
+    text-align: center !important;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width:800px) {
+    .pstartt{
+        text-align: center !important;
+        padding-left: 0 !important;
+    }
+}
+
 .main_first{
     background-color: #02121D !important;
 }

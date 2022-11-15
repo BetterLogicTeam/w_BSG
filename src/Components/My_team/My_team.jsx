@@ -57,7 +57,7 @@ function My_team() {
 
     return (
         <div className='mmmmm'>
-            <h3 className='text-white ps-3 pt-5 mb-3'>My Team</h3>
+            <h3 className='text-white pstartt pt-5 mb-3'>My Team</h3>
             <RepetationComponent />
 
 

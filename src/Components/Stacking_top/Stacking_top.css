@@ -7,6 +7,12 @@
     width: 100px !important;
 }
 
+.both_dev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .stack_btn_s {
     /* width: 120px; */
     height: 50px;
@@ -44,6 +50,13 @@ a {
 @media only screen and (max-width:600px) {
     .stack_btn_s {
         margin-top: 10px !important;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .stack_btn_s{
+        padding: 7px 5px !important;
+        font-size: 11px !important;
     }
 }
 

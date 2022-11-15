@@ -39,7 +39,7 @@ function Deposit_details() {
           // console.log("orderInfos",orderInfos.start);
           setOrderInfo({ ...orderInfos })
           let amount = web3.utils.fromWei(orderInfos.amount)
-          let value = parseInt(amount) / 100 * 4;
+          let value = parseInt(amount) / 100 * 20;
           setReward(value)
           setOrderAmount(amount)
           setFlag(true)
@@ -68,7 +68,7 @@ function Deposit_details() {
 
   return (
     <div className='dddd'>
-      <h3 className='text-white ps-3 pt-5 pb-3'>Deposit Details</h3>
+      <h3 className='text-white pstartt pt-5 pb-3'>Deposit Details</h3>
       <RepetationComponent />
       <div className="deposit_main">
         <div className="colm inner_div">

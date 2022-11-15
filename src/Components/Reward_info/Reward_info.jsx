@@ -56,7 +56,7 @@ function Reward_info() {
 
 	return (
 		<div className='reward_info_main'>
-			<h3 className='text-white ps-3  mb-3'>Reward Infos</h3>
+			<h3 className='text-white pstartt  mb-3'>Reward Infos</h3>
 			<RepetationComponent />
 			<div className="main_deposit">
 				<div className="second_deposit">

@@ -14,6 +14,7 @@ import Indxin03 from '../../Assets/Indxin03.png';
 import Indjfz01 from '../../Assets/Indjfz01.png';
 import Indjfz02 from '../../Assets/Indjfz02.png';
 import Indjfz03 from '../../Assets/Indjfz03.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -31,9 +32,10 @@ function Homef() {
 			Wrapped WYchain Blockchain Split Game
 		</p>
 		<div className="contribute">
-        <a href="#" target="_blank" className="IndZhua">
+       <Link to="/Dashboard/Home"> <a className="IndZhua">
 			CONTRIBUTE
 		</a>
+		</Link>
         </div>
 	</div>
     </div>
@@ -70,9 +72,10 @@ function Homef() {
 				Monthy 45% 
 			</h3>
 			<div className="contribute">
-            <a href="" className="IndZhua">
+            <Link to="/Dashboard/Home"><a href="" className="IndZhua">
 				CONTRIBUTE
 			</a>
+			</Link>
             </div>
 		</div>
 		<div className="IndchiKR">
