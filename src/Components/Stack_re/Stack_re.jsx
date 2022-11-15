@@ -104,75 +104,75 @@ function Stack_re() {
         }
 
     }
-    const startclaimtime = async () => {
-        let acc = await loadWeb3();
+    // const startclaimtime = async () => {
+    //     let acc = await loadWeb3();
 
-        const web3 = window.web3;
-        let financeAppcontractOf = new web3.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
+    //     const web3 = window.web3;
+    //     let financeAppcontractOf = new web3.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
 
-        let startTime_for_claimGassFee = await financeAppcontractOf.methods.UserFee(acc).call();
-        setuserfee_Amount(web3.utils.fromWei(startTime_for_claimGassFee?.amount))
-        // console.log('startTime_for_claimGassFee', startTime_for_claimGassFee.time)
+    //     let startTime_for_claimGassFee = await financeAppcontractOf.methods.UserFee(acc).call();
+    //     setuserfee_Amount(web3.utils.fromWei(startTime_for_claimGassFee?.amount))
+    //     // console.log('startTime_for_claimGassFee', startTime_for_claimGassFee.time)
 
-        if (startTime_for_claimGassFee?.amount > 0) {
-            setIsDisable(false)
+    //     if (startTime_for_claimGassFee?.amount > 0) {
+    //         setIsDisable(false)
 
-        } else {
-            setIsDisable(true)
+    //     } else {
+    //         setIsDisable(true)
 
-        }
+    //     }
 
-        if (startTime_for_claimGassFee.time > 0) {
-            let sevenDaysSeconds = 604800
-            startTime_for_claimGassFee = parseInt(startTime_for_claimGassFee.time) + parseInt(sevenDaysSeconds)
-            let timer_get = startTime_for_claimGassFee;
-            if (timer_get <= 0) {
-                setClaimDays_here(0)
-                setClaimHours_here(0)
-                setClaimMunits_here(0)
-                setClaimSeconds(0)
-            }
-            else {
-                var currentDateTime = new Date();
-                let resultInSeconds = currentDateTime.getTime() / 1000;
-                let Time_here = (timer_get) - resultInSeconds
-                let TimeFinal = parseInt(Time_here)
-                if (TimeFinal > 0) {
-                    let days = parseInt(TimeFinal / 86400)
+    //     if (startTime_for_claimGassFee.time > 0) {
+    //         let sevenDaysSeconds = 604800
+    //         startTime_for_claimGassFee = parseInt(startTime_for_claimGassFee.time) + parseInt(sevenDaysSeconds)
+    //         let timer_get = startTime_for_claimGassFee;
+    //         if (timer_get <= 0) {
+    //             setClaimDays_here(0)
+    //             setClaimHours_here(0)
+    //             setClaimMunits_here(0)
+    //             setClaimSeconds(0)
+    //         }
+    //         else {
+    //             var currentDateTime = new Date();
+    //             let resultInSeconds = currentDateTime.getTime() / 1000;
+    //             let Time_here = (timer_get) - resultInSeconds
+    //             let TimeFinal = parseInt(Time_here)
+    //             if (TimeFinal > 0) {
+    //                 let days = parseInt(TimeFinal / 86400)
 
-                    setClaimDays_here(days)
-                    TimeFinal = TimeFinal % (86400)
-                    let hours = parseInt(TimeFinal / 3600)
-                    setClaimHours_here(hours)
-                    TimeFinal %= 3600
-                    let munites = parseInt(TimeFinal / 60)
-                    setClaimMunits_here(munites)
-                    TimeFinal %= 60
-                    let second_here = parseInt(TimeFinal)
+    //                 setClaimDays_here(days)
+    //                 TimeFinal = TimeFinal % (86400)
+    //                 let hours = parseInt(TimeFinal / 3600)
+    //                 setClaimHours_here(hours)
+    //                 TimeFinal %= 3600
+    //                 let munites = parseInt(TimeFinal / 60)
+    //                 setClaimMunits_here(munites)
+    //                 TimeFinal %= 60
+    //                 let second_here = parseInt(TimeFinal)
 
-                    setClaimSeconds(second_here)
+    //                 setClaimSeconds(second_here)
 
-                    // user = 'yes'
-
-
-                }
-                else {
-                    setClaimDays_here(0)
-                    setClaimHours_here(0)
-                    setClaimMunits_here(0)
-                    setClaimSeconds(0)
-                    // setIsDisable(false)
-
-                }
-
-            }
-        }
-        else {
-            // alert('time must be greater then 0')
-        }
+    //                 // user = 'yes'
 
 
-    }
+    //             }
+    //             else {
+    //                 setClaimDays_here(0)
+    //                 setClaimHours_here(0)
+    //                 setClaimMunits_here(0)
+    //                 setClaimSeconds(0)
+    //                 // setIsDisable(false)
+
+    //             }
+
+    //         }
+    //     }
+    //     else {
+    //         // alert('time must be greater then 0')
+    //     }
+
+
+    // }
 
 
 
@@ -183,18 +183,18 @@ function Stack_re() {
         let distributePoolReward = await financeAppcontractOf.methods.distributePoolRewards().send({ from: acc });
        
     }
-    const claimGassFee = async () => {
-        let acc = await loadWeb3();
-        const web3 = window.web3;
-        let financeAppcontractOf = new web3.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
-        let ClainGassFee = await financeAppcontractOf.methods.ClaimGassFee().send({ from: acc });
+    // const claimGassFee = async () => {
+    //     let acc = await loadWeb3();
+    //     const web3 = window.web3;
+    //     let financeAppcontractOf = new web3.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
+    //     let ClainGassFee = await financeAppcontractOf.methods.ClaimGassFee().send({ from: acc });
     
-    }
+    // }
     useEffect(() => {
 
       let id=  setInterval(() => {
             getDetail()
-            startclaimtime()
+            // startclaimtime()
 
         }, 1000);
         return () => {
@@ -304,18 +304,11 @@ function Stack_re() {
                         </div>
                     </div>
                 </div>
+                
                 <div className="row mt-5 justify-content-center">
                     <div className="col-lg-8">
                         <div className="card stack_re_card">
-                            <div className="d-flex dsds">
-                                <BsStars className='icon_color fs-3'></BsStars>
-                                <div className='' style={{ textAlign: "left" }}>
-                                    <h3 className='stack_re_h3'>Claim Gas Fee</h3>
-                                    <p className='text-white'>Claim your Gas Fee any Time</p>
-
-                                    {/* <p className='text-white'>Time Remaining</p> */}
-                                </div>
-                            </div>
+                            {/*  */}
                             <div className="d-flex sdsd claim_bottom text-white" style={{ alignItems: "center", fontSize: "1.2rem" }}>
 
 
@@ -334,10 +327,10 @@ function Stack_re() {
                                     </div></> : ""
                                 } */}
 
-                                <div className='claim_amount' >
+                                {/* <div className='claim_amount' >
                                     Amount  &nbsp;&nbsp;
                                     {userfee_Amount} DAI
-                                </div>
+                                </div> */}
                                 {/* {
                                     info3 ? <>  <div className='rounded py-1 px-2' style={{ border: "1px solid #ffbf00" }}>
                                         <p className='font_size mb-0'>4 star  player shall <br />split the daily <br />pool daily</p>
@@ -346,9 +339,9 @@ function Stack_re() {
 
                             </div>
 
-                            <Button className='start_btn  mt-3' disabled={isdisable} onClick={() => claimGassFee()} style={{ backgroundColor: "#ffbf00", color: "black", border: "1px solid #ffbf00" }}>
+                            {/* <Button className='start_btn  mt-3' disabled={isdisable} onClick={() => claimGassFee()} style={{ backgroundColor: "#ffbf00", color: "black", border: "1px solid #ffbf00" }}>
                                 Claim Gas Fee
-                            </Button>
+                            </Button> */}
                         </div>
                     </div>
                 </div>

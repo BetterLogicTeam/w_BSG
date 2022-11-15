@@ -13,7 +13,7 @@ import ReactLoading from 'react-loading';
 function Register(props, getAccount) {
 
     let [accadress, setaccadress] = useState('')
-    let [regisdterAdress, setRegisdterAdress] = useState('0xD5db0cB58648e8Bc91267c9f25BDDBD7FA9466B2')
+    let [regisdterAdress, setRegisdterAdress] = useState('0xbd32a779fab9d9c69cff2336a428155b58da2231')
     let [amount, setAmount] = useState('')
     const [RefID, setRefID] = useState("")
     let [loader, setloader] = useState(false)
@@ -59,26 +59,26 @@ function Register(props, getAccount) {
                         if (totalDeposit > 0 || regisdterAdress.toLowerCase() == defaultRefer.toLowerCase()) {
                             if (userInfo.referrer == '0x0000000000000000000000000000000000000000') {
 
-                                if ((parseInt(amount) > 49 && parseInt(amount) <= 10000)) {
-                                    let maxDeposit = Web3.utils.fromWei(userInfo.maxDeposit)
-                                    if ((parseInt(maxDeposit) == 0 || parseInt(amount) >= parseInt(maxDeposit))) {
-                                        if (parseInt(amount) % 50 === 0) {
-                                            // amount=amount + Number(0.002)
-                                            console.log("Check", amount);   
-                                            amount = web3.utils.toWei(amount)
+                                // if ((parseInt(amount) > 49 && parseInt(amount) <= 10000)) {
+                                //     let maxDeposit = Web3.utils.fromWei(userInfo.maxDeposit)
+                                //     if ((parseInt(maxDeposit) == 0 || parseInt(amount) >= parseInt(maxDeposit))) {
+                                //         if (parseInt(amount) % 50 === 0) {
+                                //             // amount=amount + Number(0.002)
+                                //             console.log("Check", amount);   
+                                //             amount = web3.utils.toWei(amount)
 
-                                            const approveBlock = window.web3.eth.getBlock("latest");
-                                            let approve = await financeAppTokenOf.methods.approve(financeAppContractAddress, (amount)).send({
-                                                from: acc,
-                                                gasLimit: approveBlock.gasLimit,
-                                                gasPrice: await window.web3.eth.getGasPrice(),
+                                            // const approveBlock = window.web3.eth.getBlock("latest");
+                                            // let approve = await financeAppTokenOf.methods.approve(financeAppContractAddress, (amount)).send({
+                                            //     from: acc,
+                                            //     gasLimit: approveBlock.gasLimit,
+                                            //     gasPrice: await window.web3.eth.getGasPrice(),
 
-                                            });
+                                            // });
 
-                                            let register = await financeAppcontractOf.methods.register(regisdterAdress, amount).send({
-                                                from: acc,
-                                                gasLimit: approveBlock.gasLimit,
-                                                gasPrice: await window.web3.eth.getGasPrice(),
+                                            let register = await financeAppcontractOf.methods.register(regisdterAdress).send({
+                                                from: acc
+                                                // gasLimit: approveBlock.gasLimit,
+                                                // gasPrice: await window.web3.eth.getGasPrice(),
 
                                             });
                                             toast.success('Successfully Register')
@@ -86,32 +86,32 @@ function Register(props, getAccount) {
 
                                             setloader(false)
                                         }
-                                        else {
-                                            toast.error('please enter value in ratio 50 ')
-                                            setloader(false)
+                                //         else {
+                                //             toast.error('please enter value in ratio 50 ')
+                                //             setloader(false)
 
-                                        }
-                                    } else {
-                                        toast.error(`please enter value greater then ${maxDeposit}`)
+                                //         }
+                                //     } else {
+                                //         toast.error(`please enter value greater then ${maxDeposit}`)
+                                //         setloader(false)
+
+                                //     }
+                                // }
+                                // else {
+                                //     toast.error('value must be greater then 50 and less then 10000 ')
+                                //     setloader(false)
+
+                                // }
+
+                                    
+                                    else {
+                                        toast.error('referrer bonded')
                                         setloader(false)
-
+                                        props.onHide()
+        
                                     }
-                                }
-                                else {
-                                    toast.error('value must be greater then 50 and less then 10000 ')
-                                    setloader(false)
-
-                                }
-
-
                             }
-                            else {
-                                toast.error('referrer bonded')
-                                setloader(false)
-                                props.onHide()
-
-                            }
-                        }
+                         
                         else {
                             toast.error('invalid refer')
                             setloader(false)
@@ -212,7 +212,7 @@ function Register(props, getAccount) {
                         <div className="row">
                             <div className="col-lg-8">
                                 <input type="text" placeholder='Enter Address' value={regisdterAdress} onChange={(e) => { setRegisdterAdress(e.target.value) }} className='input_modal' />
-                                <input type="text" placeholder='Enter amount in Dai' value={amount} onChange={(e) => { setAmount(e.target.value) }} className='input_modal mt-3' />
+                                {/* <input type="text" placeholder='Enter amount in Dai' value={amount} onChange={(e) => { setAmount(e.target.value) }} className='input_modal mt-3' /> */}
 
                             </div>
 
