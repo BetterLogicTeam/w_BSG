@@ -129,8 +129,8 @@ const RepetationComponent = () => {
             <div className="main_scnd">
                 <div className="main_third">
                     <MdLocationOn className='icon_color fs-3'></MdLocationOn>
-                    <p className='contract1'>Contract Address: <a href={`https://polygonscan.com/address/${financeAppContractAddress}`} className="stack_p2" target="_blank">{financeAppContractAddress} </a></p>
-                    <p className='contract2'>Contract Address: <a href={`https://polygonscan.com/address/${financeAppContractAddress}`} className="stack_p2" target="_blank" >{(financeAppContractAddress?.substring(0, 4) + "..." + financeAppContractAddress?.substring(financeAppContractAddress?.length - 4))}</a></p>
+                    <p className='contract1'>Contract Address: <a href={`https://testnet.bscscan.com/address/${financeAppContractAddress}`} className="stack_p2" target="_blank">{financeAppContractAddress} </a></p>
+                    <p className='contract2'>Contract Address: <a href={`https://testnet.bscscan.com/address/${financeAppContractAddress}`} className="stack_p2" target="_blank" >{(financeAppContractAddress?.substring(0, 4) + "..." + financeAppContractAddress?.substring(financeAppContractAddress?.length - 4))}</a></p>
 
                     
                 </div>
@@ -142,7 +142,7 @@ const RepetationComponent = () => {
                 </div>
                 <div className="main_third">
                     <GiCycle className='icon_color fs-3'></GiCycle>
-                    <p>Income: 7 days per cycle. Monthly 16%</p>
+                    <p>Income: 10 days per cycle. Monthly 60%</p>
                 </div>
                 <div className="main_third">
                     <BsFillStopwatchFill className='icon_color fs-3'></BsFillStopwatchFill>

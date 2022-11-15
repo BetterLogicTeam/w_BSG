@@ -27,11 +27,11 @@ function My_team() {
  
 
                 let getTeamDeposit = await financeAppcontractOf.methods.getTeamDeposit(acc).call();
-                let checkMaxDeposit = await financeAppcontractOf.methods.checkMaxDeposit(acc).call();
-                let check_Address=checkMaxDeposit.addr
+                // let checkMaxDeposit = await financeAppcontractOf.methods.checkMaxDeposit(acc).call();
+                // let check_Address=checkMaxDeposit.addr
               
 
-                checkMaxDeposit=web3.utils.fromWei(checkMaxDeposit.amount)
+                // checkMaxDeposit=web3.utils.fromWei(checkMaxDeposit.amount)
                 let sales = web3.utils.fromWei(getTeamDeposit[2])
                 let PerformanceAarea = web3.utils.fromWei(getTeamDeposit[0])
                 let PerformanceBarea = web3.utils.fromWei(getTeamDeposit[1])
@@ -40,9 +40,9 @@ function My_team() {
                 obj['PerformanceAarea'] = PerformanceAarea
                 obj['PerformanceBarea'] = PerformanceBarea
                 obj['orderLength'] = getOrderLength.teamNum
-                obj['checkMaxDeposit'] = checkMaxDeposit
+                // obj['checkMaxDeposit'] = checkMaxDeposit
                 obj['Leval_Data'] = getOrderLength.level
-                obj['check_Address'] = check_Address
+                // obj['check_Address'] = check_Address
 
 
                 setUserInfos(obj)
@@ -102,12 +102,12 @@ function My_team() {
                 <div className="team_main2">
                     {/* <div className="Last_div_img"> */}
                         <div className="Last_div_img">
-                            <img src={img3} alt="" />
+                            {/* <img src={img3} alt="" /> */}
                             <div className="team_p text-white ">
-                                <span>Maximum Team Deposit-Level</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span>{userinfos.checkMaxDeposit} - {userinfos.Leval_Data}
+                                {/* <span>Maximum Team Deposit-Level</span>&nbsp;&nbsp;&nbsp;&nbsp; */}
+                                {/* <span>{userinfos.checkMaxDeposit} - {userinfos.Leval_Data} */}
                                  {/* - {userinfos.check_Address} */}
-                                  </span>
+                                  {/* </span> */}
                             </div>
                         </div>
                         

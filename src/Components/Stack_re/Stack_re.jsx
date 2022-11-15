@@ -305,46 +305,54 @@ function Stack_re() {
                     </div>
                 </div>
                 
-                <div className="row mt-5 justify-content-center">
+                {/* <div className="row mt-5 justify-content-center">
                     <div className="col-lg-8">
                         <div className="card stack_re_card">
-                            {/*  */}
+                            <div className="d-flex dsds">
+                                <BsStars className='icon_color fs-3'></BsStars>
+                                <div className='' style={{ textAlign: "left" }}>
+                                    <h3 className='stack_re_h3'>Claim Gas Fee</h3>
+                                    <p className='text-white'>Claim your Gas Fee any Time</p>
+
+                                    <p className='text-white'>Time Remaining</p>
+                                </div>
+                            </div>
                             <div className="d-flex sdsd claim_bottom text-white" style={{ alignItems: "center", fontSize: "1.2rem" }}>
 
 
 
                                 <div className='d-flex sdsd'>
-                                    {/* {claimdays} D : {claimhours} H : {claimminutes} M : {claimseconds} S */}
+                                    {claimdays} D : {claimhours} H : {claimminutes} M : {claimseconds} S
 
-                                    {/* <div className="d-flex ques ">
+                                    <div className="d-flex ques ">
                                         <p className='aliment'>info</p>
                                         <AiFillQuestionCircle className='icon_color s_i' onClick={() => setinfo4(!info4)}></AiFillQuestionCircle>
-                                    </div> */}
+                                    </div>
                                 </div>
-                                {/* {
+                                {
                                     info4 ? <>  <div className='rounded py-1 px-2' style={{ border: "1px solid #ffbf00" }}>
                                         <p className='font_size mb-0'>You can claim your<br />gas fee after<br /> any Time</p>
                                     </div></> : ""
-                                } */}
+                                }
 
-                                {/* <div className='claim_amount' >
+                                <div className='claim_amount' >
                                     Amount  &nbsp;&nbsp;
                                     {userfee_Amount} DAI
-                                </div> */}
-                                {/* {
+                                </div>
+                                {
                                     info3 ? <>  <div className='rounded py-1 px-2' style={{ border: "1px solid #ffbf00" }}>
                                         <p className='font_size mb-0'>4 star  player shall <br />split the daily <br />pool daily</p>
                                     </div></> : ""
-                                } */}
+                                }
 
                             </div>
 
-                            {/* <Button className='start_btn  mt-3' disabled={isdisable} onClick={() => claimGassFee()} style={{ backgroundColor: "#ffbf00", color: "black", border: "1px solid #ffbf00" }}>
+                            <Button className='start_btn  mt-3' disabled={isdisable} onClick={() => claimGassFee()} style={{ backgroundColor: "#ffbf00", color: "black", border: "1px solid #ffbf00" }}>
                                 Claim Gas Fee
-                            </Button> */}
+                            </Button>s
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* <Button className=' mt-3 ' disabled={isdisable} onClick={() => distributePoolReward()} style={{ backgroundColor: "#ffbf00", color: "black", border: "none" }}>Distribute Pool Reward</Button> */}
                 {/* <button className='stack_btn_s mt-3 ' disabled={isdisable} onClick={distributePoolReward}>Distribute Pool Reward</button> */}

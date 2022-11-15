@@ -133,6 +133,7 @@
 .second_deposit {
     display: flex;
     flex-direction: column;
+    
 }
 
 .first_line {
@@ -172,6 +173,7 @@
     justify-content: space-between !important;
     border-radius: 10px 10px 0px 0px;
     font-size: 12px;
+    margin-top: -40px;
 }
 
 @media screen and (max-width: 700px) {

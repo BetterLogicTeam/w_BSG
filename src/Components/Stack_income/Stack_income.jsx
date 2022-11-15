@@ -9,7 +9,7 @@ import { MdLocationOn } from 'react-icons/md'
 import { GiCycle } from 'react-icons/gi'
 
 function Stack_income() {
-  const [income, setIncome] = useState('7 Days Per Cycle,Monthly 16%')
+  const [income, setIncome] = useState('10 Days Per Cycle,Monthly 60%')
   const [depositTime, setdepositTime] = useState('')
   const [unixTime, setUnixTime] = useState(0)
   const [days, setDays_here] = useState(0)
@@ -29,6 +29,7 @@ function Stack_income() {
       const web3 = window.web3;
       let financeAppcontractOf = new web3.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
       let depostTime = await financeAppcontractOf.methods.getCurDay().call();
+      
       setdepositTime(depostTime)
       let startTime = await financeAppcontractOf.methods.startTime().call();
       setUnixTime(startTime)
@@ -127,8 +128,8 @@ function Stack_income() {
                   <MdLocationOn className='icon_color fs-3'></MdLocationOn>
                 </div>
                 <div>
-                  <p className='stack_p width_adjust'>Contract address: <a href={`https://polygonscan.com/address/${financeAppContractAddress}`} className="stack_p" target="_blank">{financeAppContractAddress} </a></p>
-                  <p className='stack_p width_adjust2'>Contract address: <a href={`https://polygonscan.com/address/${financeAppContractAddress}`} className="stack_p" target="_blank" >{(financeAppContractAddress?.substring(0, 4) + "..." + financeAppContractAddress?.substring(financeAppContractAddress?.length - 4))}</a></p>
+                  <p className='stack_p width_adjust'>Contract address: <a href={`https://testnet.bscscan.com/address/${financeAppContractAddress}`} className="stack_p" target="_blank">{financeAppContractAddress} </a></p>
+                  <p className='stack_p width_adjust2'>Contract address: <a href={`https://testnet.bscscan.com/address/${financeAppContractAddress}`} className="stack_p" target="_blank" >{(financeAppContractAddress?.substring(0, 4) + "..." + financeAppContractAddress?.substring(financeAppContractAddress?.length - 4))}</a></p>
                   {/* <p className=' aliment width_adjust2'>{refrealAdress?.substring(0,8) + "..." + refrealAdress?.substring(refrealAdress?.length -8)}</p> */}
                 </div>
               </div>
