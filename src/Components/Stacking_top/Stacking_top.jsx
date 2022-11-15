@@ -22,6 +22,7 @@ import My_team from '../My_team/My_team'
 import Latest_Deposit from '../Latest_Deposit/Latest_Deposit'
 import Deposit_details from '../Deposit_details/Deposit_details'
 import { FaFolderMinus } from 'react-icons/fa'
+import abooster from "../../Assets/abooster.png"
 
 
 function Stacking_top() {
@@ -78,7 +79,7 @@ function Stacking_top() {
           <div className="row">
             <div className='d-flex justify-content-between'>
               <Link to='/'>
-                <img src={LOGO1} className='stackig_top_logo' alt="" />
+                <img src={abooster} className='stackig_top_logo' alt="" />
               </Link>
               <div className="both_dev">
                 <button className='stack_btn_s' > {btnTxt}</button>

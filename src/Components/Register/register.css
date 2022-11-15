@@ -5,7 +5,7 @@
 
 .modal_h4 {
     /* color: var(--clr); */
-    color: #FFBF00 !important;
+    color: #0a86c4 !important;
     margin-left: 20% !important;
 }
 
@@ -17,12 +17,12 @@
     color: white !important;
     border-radius: 10px !important;
     /* border: 1px solid var(--clr) !important; */
-    border: #FFBF00 1px solid !important;
+    border: #0a86c4 1px solid !important;
 }
 
 .input_modal:focus {
     /* border: 1px solid var(--clr) !important; */
-    border: #FFBF00 1px solid !important;
+    border: #0a86c4 1px solid !important;
 }
 
 .modal_pa {
@@ -86,7 +86,7 @@
     transform-origin: right;
     transition: all 0.3s ease;
     /* background: #28DBD1 !important; */
-    background-color: #FFBF00;
+    background-color: #0a86c4 !important;
     border: 1px solid transparent;
     font-weight: 600;
 }

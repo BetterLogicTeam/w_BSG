@@ -26,7 +26,7 @@ function Homef() {
             <div className="container">
 	<div className="IndBanB Indwark Huans">
 		<h3>
-			wBSG
+			A1 BOOSTER
 		</h3>
 		<p>
 			Wrapped WYchain Blockchain Split Game
@@ -69,7 +69,7 @@ function Homef() {
 	<div className="IndchiK Indwark Huans flexC fl-bet">
 		<div className="IndchiKL">
 			<h3>
-				Monthy 45% 
+				Monthy 60% 
 			</h3>
 			<div className="contribute">
             <Link to="/Dashboard/Home"><a href="" className="IndZhua">
@@ -121,10 +121,10 @@ function Homef() {
 				High return
 			</h3>
 			<p>
-				15 days per cycle initialys at
-				<span>1.5%, </span>
+				10 days per cycle initialys at
+				<span> 2%, </span>
 				per cycle
-				<span>22.5%</span>
+				<span> 20%</span>
 			</p>
 		</div>
 		<div className="IndzhuS">
@@ -132,12 +132,12 @@ function Homef() {
 			<h3>
 				Booster
 			</h3>
-			<p>In a month 4 direct each $1000 you will get boost your ROI 54%</p>
+			<p>In a month 1 direct each $1000 you will get boost your ROI 60%</p>
 		</div>
 		<div className="IndzhuS">
 			<div className="IndzhuI"><img src={Indzhu03}/></div>
 			<h3>
-				Sustainability and longevity is the key for wBSG
+				Sustainability and longevity is the key for A1 BOOSTER
 			</h3>
 		</div>
 		<div className="IndzhuS">
@@ -157,7 +157,7 @@ function Homef() {
 			The most trusted platform. 
 		</h3>
 		<p>
-			wBSG the platform for financial freedom 
+			A1 BOOSTER the platform for financial freedom 
 		</p>
 	</div>
 	<div className="IndxinK Indwark Huans flex fl-bet">
@@ -178,7 +178,7 @@ function Homef() {
 				High return
 			</h3>
 			<p>
-				45% monthly return
+				60% monthly return
 				<br/>
 				And it's not a high risk platform.
 			</p>
@@ -230,7 +230,7 @@ function Homef() {
     <div className="container">
 	<div className="IndZhuK Indwark Huans">
 		<h3>
-			Monthly 45% 
+			Monthly 60% 
 		</h3>
 		<a href="#" className="IndZhua">
 			Start earning

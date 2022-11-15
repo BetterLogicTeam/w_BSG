@@ -91,7 +91,7 @@ function Withdraw_m(props) {
                             <div className="col-lg-12 p-o">
                                 <div className="d-flex">
                                     <div className="icons_m">
-                                        <Button onClick={() => props.onHide()} className='color-black' style={{ backgroundColor: "#ffbf00", border: "1px solid #ffbf00" }}><MdArrowBackIos ></MdArrowBackIos></Button>
+                                        <Button onClick={() => props.onHide()} className='color-black' style={{ backgroundColor: "#0a86c4", border: "1px solid #0a86c4" }}><MdArrowBackIos ></MdArrowBackIos></Button>
                                     </div>
                                     <h4 className='ms-5 modal_h4'>Withdraw</h4>
                                 </div>

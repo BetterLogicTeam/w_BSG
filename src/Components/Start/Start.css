@@ -28,7 +28,7 @@
     transform-origin: right;
     transition: all 0.3s ease;
     /* background: #28DBD1; */
-    background-color: #FFBF00;
+    background-color: #0a86c4 ! important;
     border: 1px solid transparent;
     font-weight: 600;
 }
@@ -37,7 +37,7 @@
     color: white !important;
     transform: translateY(-3px);
     background: transparent !important;
-    border-color: #FFBF00 !important;
+    border-color: #0a86c4 !important;
     ;
     /* box-shadow: 0 0 10px rgb(40 219 209 / 40%); */
 }

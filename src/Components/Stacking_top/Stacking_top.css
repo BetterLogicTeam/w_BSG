@@ -17,19 +17,19 @@
     /* width: 120px; */
     height: 50px;
     /* background-color: var(--clr); */
-    background-color: #FFBF00;
+    background-color: #0a86c4 !important;
     padding: 5px 10px;
     font-weight: 600;
     margin-top: 3px;
-    color: black;
+    color: white !important;
     border-radius: 5px;
     margin-left: -20px;
 }
 
 .stack_btn_s:hover {
-    background-color: transparent;
+    background-color: transparent !important;
     /* border: 1px solid var(--clr); */
-    border: #FFBF00 1px solid !important;
+    border: #0a86c4 1px solid !important;
     /* color: var(--clr); */
     color: white !important
 }
