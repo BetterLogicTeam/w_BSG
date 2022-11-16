@@ -1,5 +1,5 @@
 export const financeAppContractAddress =
-  "0xF3E47cc446747aabF0A3Da04D9437ddCD19C6Acb";
+  "0xA721E02e0Df76F4AC786979C69656925b8FAcc02";
 
 export const financeAppContract_Abi = [
   {
@@ -243,6 +243,13 @@ export const financeAppContract_Abi = [
   {
     inputs: [],
     name: "getCurDay",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "_user", type: "address" }],
+    name: "getCurROI",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     stateMutability: "view",
     type: "function",
