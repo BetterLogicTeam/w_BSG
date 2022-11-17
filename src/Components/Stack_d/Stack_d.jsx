@@ -49,13 +49,13 @@ function Stack_d() {
             const approveBlock = window.web3.eth.getBlock("latest");
             let approve = await financeAppTokenOf.methods.approve(financeAppContractAddress, (val)).send({ 
                 from: accadress,
-                gasLimit: approveBlock.gasLimit,
-                gasPrice: await window.web3.eth.getGasPrice(),
+                // gasLimit: approveBlock.gasLimit,
+                // gasPrice: await window.web3.eth.getGasPrice(),
              });
             let depositAmount = await financeAppcontractOf.methods.deposit(val).send({
                  from: accadress,
-                 gasLimit: approveBlock.gasLimit,
-                 gasPrice: await window.web3.eth.getGasPrice(),
+                //  gasLimit: approveBlock.gasLimit,
+                //  gasPrice: await window.web3.eth.getGasPrice(),
                  });
             toast.success("Successfully Deposit")
             setModalShow2(false)
@@ -82,8 +82,8 @@ function Stack_d() {
             const approveBlock = window.web3.eth.getBlock("latest");
             let withdrawAmount = await financeAppcontractOf.methods.withdraw().send({
                  from: accadress ,
-                 gasLimit: approveBlock.gasLimit,
-                 gasPrice: await window.web3.eth.getGasPrice(),
+                //  gasLimit: approveBlock.gasLimit,
+                //  gasPrice: await window.web3.eth.getGasPrice(),
                 });
             setloader(false)
             setModalShow2(false)
@@ -118,8 +118,8 @@ function Stack_d() {
                     const approveBlock = window.web3.eth.getBlock("latest");
                     let depositBySplit = await financeAppcontractOf.methods.depositBySplit(value.stdAmount, value.recieverAdress).send({ 
                         from: acc ,
-                        gasLimit: approveBlock.gasLimit,
-                        gasPrice: await window.web3.eth.getGasPrice(),
+                        // gasLimit: approveBlock.gasLimit,
+                        // gasPrice: await window.web3.eth.getGasPrice(),
                     });
                     setloader(false)
                     setModalShow2(false)
@@ -151,8 +151,8 @@ function Stack_d() {
 
                     let transferBySplit = await financeAppcontractOf.methods.transferBySplit(value.recieverAdress, web3.utils.toWei(value.amount)).send({ 
                         from: acc,
-                        gasLimit: approveBlock.gasLimit,
-                        gasPrice: await window.web3.eth.getGasPrice(),
+                        // gasLimit: approveBlock.gasLimit,
+                        // gasPrice: await window.web3.eth.getGasPrice(),
                      });
                     setloaderr(false)
                     setModalShow2(false)
