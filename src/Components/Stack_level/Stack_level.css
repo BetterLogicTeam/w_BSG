@@ -50,37 +50,40 @@
         /* font-size: 0.7rem !important; */
         display: none;
     }
-    .width_adjust3{
+
+    .width_adjust3 {
         width: 200px !important;
 
     }
-    .width_adjust2{
 
-    }
+    .width_adjust2 {}
 
     .S_ssss {
         gap: 5% !important;
     }
-    .contract1{
+
+    .contract1 {
         display: none;
     }
 }
-.star_color{
-    color: #ffbf00 !important;
+
+.star_color {
+    color: #0a86c4 !important;
 }
 
-.aliment{
+.aliment {
     margin-top: -0rem !important;
     color: #ffff;
 }
 
 
 @media (min-width:600px)and (max-width:6000px) {
-  
-    .width_adjust2{
+
+    .width_adjust2 {
         display: none;
     }
-    .contract2{
+
+    .contract2 {
         display: none;
     }
 

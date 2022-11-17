@@ -13,7 +13,7 @@ import ReactLoading from 'react-loading';
 function Register(props, getAccount) {
 
     let [accadress, setaccadress] = useState('')
-    let [regisdterAdress, setRegisdterAdress] = useState('0xbd32a779fab9d9c69cff2336a428155b58da2231')
+    let [regisdterAdress, setRegisdterAdress] = useState()
     let [amount, setAmount] = useState('')
     const [RefID, setRefID] = useState("")
     let [loader, setloader] = useState(false)
@@ -52,7 +52,7 @@ function Register(props, getAccount) {
                     let totalDeposit = userInfos.totalDeposit
 
                     let defaultRefer = await financeAppcontractOf.methods.defaultRefer().call();
-                    console.log("regisdterAdress",regisdterAdress);
+                    console.log("regisdterAdress", regisdterAdress);
 
                     try {
                         setloader(true)
@@ -67,51 +67,51 @@ function Register(props, getAccount) {
                                 //             console.log("Check", amount);   
                                 //             amount = web3.utils.toWei(amount)
 
-                                            // const approveBlock = window.web3.eth.getBlock("latest");
-                                            // let approve = await financeAppTokenOf.methods.approve(financeAppContractAddress, (amount)).send({
-                                            //     from: acc,
-                                            //     gasLimit: approveBlock.gasLimit,
-                                            //     gasPrice: await window.web3.eth.getGasPrice(),
+                                // const approveBlock = window.web3.eth.getBlock("latest");
+                                // let approve = await financeAppTokenOf.methods.approve(financeAppContractAddress, (amount)).send({
+                                //     from: acc,
+                                //     gasLimit: approveBlock.gasLimit,
+                                //     gasPrice: await window.web3.eth.getGasPrice(),
 
-                                            // });
+                                // });
 
-                                            let register = await financeAppcontractOf.methods.register(regisdterAdress).send({
-                                                from: acc
-                                                // gasLimit: approveBlock.gasLimit,
-                                                // gasPrice: await window.web3.eth.getGasPrice(),
+                                let register = await financeAppcontractOf.methods.register(regisdterAdress).send({
+                                    from: acc
+                                    // gasLimit: approveBlock.gasLimit,
+                                    // gasPrice: await window.web3.eth.getGasPrice(),
 
-                                            });
-                                            toast.success('Successfully Register')
-                                            props.onHide()
+                                });
+                                toast.success('Successfully Register')
+                                props.onHide()
 
-                                            setloader(false)
-                                        }
-                                //         else {
-                                //             toast.error('please enter value in ratio 50 ')
-                                //             setloader(false)
-
-                                //         }
-                                //     } else {
-                                //         toast.error(`please enter value greater then ${maxDeposit}`)
-                                //         setloader(false)
-
-                                //     }
-                                // }
-                                // else {
-                                //     toast.error('value must be greater then 50 and less then 10000 ')
-                                //     setloader(false)
-
-                                // }
-
-                                    
-                                    else {
-                                        toast.error('referrer bonded')
-                                        setloader(false)
-                                        props.onHide()
-        
-                                    }
+                                setloader(false)
                             }
-                         
+                            //         else {
+                            //             toast.error('please enter value in ratio 50 ')
+                            //             setloader(false)
+
+                            //         }
+                            //     } else {
+                            //         toast.error(`please enter value greater then ${maxDeposit}`)
+                            //         setloader(false)
+
+                            //     }
+                            // }
+                            // else {
+                            //     toast.error('value must be greater then 50 and less then 10000 ')
+                            //     setloader(false)
+
+                            // }
+
+
+                            else {
+                                toast.error('referrer bonded')
+                                setloader(false)
+                                props.onHide()
+
+                            }
+                        }
+
                         else {
                             toast.error('invalid refer')
                             setloader(false)
@@ -162,12 +162,17 @@ function Register(props, getAccount) {
                 let UserID = pathArray[pathArray.length - 1]
                 UserID = UserID.split('=')
                 UserID = UserID[UserID.length - 1]
-                // console.log("LAST", UserID);
 
                 setRegisdterAdress(UserID)
 
 
             } else {
+                const web3 = window.web3;
+
+                let financeAppcontractOf = new web3.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
+
+                let defaultRefer = await financeAppcontractOf.methods.defaultRefer().call();
+                setRegisdterAdress(defaultRefer)
 
             }
 

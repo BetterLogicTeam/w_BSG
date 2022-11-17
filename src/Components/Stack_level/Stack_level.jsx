@@ -61,7 +61,7 @@ function Stack_level({ acc }) {
                     // console.log('what is balance', userBalance)
                 })
 
-console.log(userinfo.referrer);
+                console.log(userinfo.referrer);
                 setrefrealAdress(userinfo.referrer)
 
 
@@ -99,7 +99,7 @@ console.log(userinfo.referrer);
                         <div className="card stack_inner_card">
                             <div className="stack_level_content">
                                 <h6 className='stack_level_h6'><Rating
-                                    style={{ color: "#ffbf00" }}
+                                    style={{ color: "#0a86c4" }}
                                     initialRating={myLevel}
                                     emptySymbol={<AiOutlineStar />}
                                     fullSymbol={<AiFillStar className='star_color' />}
