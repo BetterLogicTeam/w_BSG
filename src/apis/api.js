@@ -2,11 +2,11 @@ import Web3 from "web3";
 let isItConnected = false;
 const networks = {
   bsc: {
-    chainId: `0x${Number(80001).toString(16)}`,
-    chainName: "Mumbai Testnet",
+    chainId: `0x${Number(97).toString(16)}`,
+    chainName: "Binance Testnet",
     nativeCurrency: {
-      name: "polygon",
-      symbol: "MATIC",
+      name: "binance",
+      symbol: "BNB",
       decimals: 18,
     },
     rpcUrls: [
@@ -58,7 +58,7 @@ export const loadWeb3 = async () => {
       await window.ethereum.enable();
       await window.web3.eth.getChainId((err, netId) => {
         switch (netId.toString()) {
-          case "80001":
+          case "97":
             isItConnected = true;
             break;
           default:

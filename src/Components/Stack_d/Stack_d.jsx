@@ -33,7 +33,7 @@ function Stack_d() {
             // toast.error("Wrong Newtwork please connect to Polygon MainNet ")
         } else {
             setaccadress(acc)
-            
+
         }
     }
     useEffect(() => {
@@ -47,16 +47,17 @@ function Stack_d() {
             let val = web3.utils.toWei(value);
             let financeAppTokenOf = new web3.eth.Contract(financeAppTokenAbi, financeAppTokenAddress);
             const approveBlock = window.web3.eth.getBlock("latest");
-            let approve = await financeAppTokenOf.methods.approve(financeAppContractAddress, (val)).send({ 
+            console.log('approveBlock', approveBlock)
+            let approve = await financeAppTokenOf.methods.approve(financeAppContractAddress, (val)).send({
                 from: accadress,
                 // gasLimit: approveBlock.gasLimit,
                 // gasPrice: await window.web3.eth.getGasPrice(),
-             });
+            });
             let depositAmount = await financeAppcontractOf.methods.deposit(val).send({
-                 from: accadress,
+                from: accadress,
                 //  gasLimit: approveBlock.gasLimit,
                 //  gasPrice: await window.web3.eth.getGasPrice(),
-                 });
+            });
             toast.success("Successfully Deposit")
             setModalShow2(false)
 
@@ -81,10 +82,10 @@ function Stack_d() {
             let financeAppcontractOf = new web3.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
             const approveBlock = window.web3.eth.getBlock("latest");
             let withdrawAmount = await financeAppcontractOf.methods.withdraw().send({
-                 from: accadress ,
+                from: accadress,
                 //  gasLimit: approveBlock.gasLimit,
                 //  gasPrice: await window.web3.eth.getGasPrice(),
-                });
+            });
             setloader(false)
             setModalShow2(false)
 
@@ -116,8 +117,8 @@ function Stack_d() {
                 try {
                     setloader(true)
                     const approveBlock = window.web3.eth.getBlock("latest");
-                    let depositBySplit = await financeAppcontractOf.methods.depositBySplit(value.stdAmount, value.recieverAdress).send({ 
-                        from: acc ,
+                    let depositBySplit = await financeAppcontractOf.methods.depositBySplit(value.stdAmount, value.recieverAdress).send({
+                        from: acc,
                         // gasLimit: approveBlock.gasLimit,
                         // gasPrice: await window.web3.eth.getGasPrice(),
                     });
@@ -133,7 +134,7 @@ function Stack_d() {
                     console.log("Error While calling depositBySplit ", e);
                     setloader(false)
                     setModalShow2(false)
-                  
+
                     setModalShow3(false)
                     setModalShow(false)
                     setModalShow1(false)
@@ -149,11 +150,11 @@ function Stack_d() {
                     setloaderr(true)
                     const approveBlock = window.web3.eth.getBlock("latest");
 
-                    let transferBySplit = await financeAppcontractOf.methods.transferBySplit(value.recieverAdress, web3.utils.toWei(value.amount)).send({ 
+                    let transferBySplit = await financeAppcontractOf.methods.transferBySplit(value.recieverAdress, web3.utils.toWei(value.amount)).send({
                         from: acc,
                         // gasLimit: approveBlock.gasLimit,
                         // gasPrice: await window.web3.eth.getGasPrice(),
-                     });
+                    });
                     setloaderr(false)
                     setModalShow2(false)
                     toast.success("successfully transfer")
@@ -172,7 +173,7 @@ function Stack_d() {
             setloader(false)
             setloaderr(false)
             setModalShow2(false)
-                  
+
             setModalShow3(false)
             setModalShow(false)
             setModalShow1(false)

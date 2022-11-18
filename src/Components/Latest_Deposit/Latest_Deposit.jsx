@@ -157,7 +157,7 @@ function Latest_Deposit() {
 			<h3 className='text-white pstartt mb-3'>Latest Deposit</h3>
 			<RepetationComponent />
 			<div className="main_deposit my-5">
-				<div className="second_deposit">
+				<div className="second_deposit" style={{ height: "500px", overflowY: "auto" }}>
 					<div className="fi_line">
 						<p>Latest Depositors</p>
 					</div>
@@ -168,24 +168,24 @@ function Latest_Deposit() {
 						ariaLabel="blocks-loading"
 						wrapperStyle={{}}
 						wrapperClass="blocks-wrapper"
-						colors={['#ffbf00', '#ffbf00', '#ffbf00', '#ffbf00', '#ffbf00']}
+						colors={['#0a86c4', '#0a86c4', '#0a86c4', '#0a86c4', '#0a86c4']}
 					/>
-					</div> : <>	
-					{
-					rewardInfo && rewardInfo.slice(0, 10).map((item, index) => {
-						return (
-							<div className="first_line">
-								<span className='spn '>{`${index + 1}).`}</span>
-								<span className='inlarge'>{item.address}</span>
-								<span className='inResponse' style={{marginLeft:'1rem'}}>{item.address?.substring(0, 4) + "..." + item.address?.substring(item.address?.length - 4)}</span>
+					</div> : <>
+						{
+							rewardInfo && rewardInfo.slice(0, 10).map((item, index) => {
+								return (
+									<div className="first_line">
+										<span className='spn '>{`${index + 1}).`}</span>
+										<span className='inlarge'>{item.address}</span>
+										<span className='inResponse' style={{ marginLeft: '1rem' }}>{item.address?.substring(0, 4) + "..." + item.address?.substring(item.address?.length - 4)}</span>
 
 
-								<span><Moment format="D MMM YYYY hh:mm:ss a" unix >{`${item.userinfos}`}</Moment></span>
+										<span><Moment format="D MMM YYYY hh:mm:ss a" unix >{`${item.userinfos}`}</Moment></span>
 
-								<div className='group_img '><img src={m1} className='' alt="" width="15%" />&nbsp;&nbsp; &nbsp; {item.amount} &nbsp;DAI</div>
-							</div>)
+										<div className='group_img '><img src={m1} className='' alt="" width="15%" />&nbsp;&nbsp; &nbsp; {item.amount} &nbsp;DAI</div>
+									</div>)
 
-					})}</>}
+							})}</>}
 
 
 

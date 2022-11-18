@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { MdArrowBackIos } from 'react-icons/md'
 import "./Deposite_m.css"
-import m1 from "../Assets/1200px-Dai_Logo.png"
+import m1 from "../Assets/1200px-Dai_Logo (2).png"
 import { financeAppContractAddress, financeAppContract_Abi } from '../../utilies/Contract';
 import { loadWeb3 } from '../../apis/api';
 import Web3 from 'web3'

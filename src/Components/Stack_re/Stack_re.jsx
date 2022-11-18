@@ -60,13 +60,13 @@ function Stack_re() {
 
         }
         else {
-            
+
             var currentDateTime = new Date();
             let resultInSeconds = currentDateTime.getTime() / 1000;
             let topupInSeconds = Number(timer_get) + Number(86400);
             // console.log("timer_get",topupInSeconds);
 
-            let Time_here =   topupInSeconds - resultInSeconds
+            let Time_here = topupInSeconds - resultInSeconds
             let TimeFinal = parseInt(Time_here)
             if (TimeFinal > 0) {
                 let days = parseInt(TimeFinal / 86400)
@@ -181,18 +181,18 @@ function Stack_re() {
         const web3 = window.web3;
         let financeAppcontractOf = new web3.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
         let distributePoolReward = await financeAppcontractOf.methods.distributePoolRewards().send({ from: acc });
-       
+
     }
     // const claimGassFee = async () => {
     //     let acc = await loadWeb3();
     //     const web3 = window.web3;
     //     let financeAppcontractOf = new web3.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
     //     let ClainGassFee = await financeAppcontractOf.methods.ClaimGassFee().send({ from: acc });
-    
+
     // }
     useEffect(() => {
 
-      let id=  setInterval(() => {
+        let id = setInterval(() => {
             getDetail()
             // startclaimtime()
 
@@ -231,7 +231,7 @@ function Stack_re() {
                                     <AiFillQuestionCircle className='icon_color s_i' onClick={() => setinfo1(!info1)}></AiFillQuestionCircle>
                                 </div>
                                 {
-                                    info1 ? <>   <div className='rounded py-1 px-2' style={{ border: "1px solid #ffbf00" }}>
+                                    info1 ? <>   <div className='rounded py-1 px-2' style={{ border: "1px solid #0a86c4" }}>
                                         <p className='font_size mb-0'>Daily Last 10 <br />depositer shall <br />be rewarded</p>
                                     </div></> : ""
                                 }
@@ -266,7 +266,7 @@ function Stack_re() {
                                     <AiFillQuestionCircle className='icon_color s_i' onClick={() => setinfo2(!info2)}></AiFillQuestionCircle>
                                 </div>
                                 {
-                                    info2 ? <>   <div className='rounded py-1 px-2' style={{ border: "1px solid #ffbf00" }}>
+                                    info2 ? <>   <div className='rounded py-1 px-2' style={{ border: "1px solid #0a86c4" }}>
                                         <p className='font_size mb-0'>Top 3 inviter daily<br />shall split the <br />pool daily</p>
                                     </div></> : ""
                                 }
@@ -294,7 +294,7 @@ function Stack_re() {
                                     <AiFillQuestionCircle className='icon_color s_i' onClick={() => setinfo3(!info3)}></AiFillQuestionCircle>
                                 </div>
                                 {
-                                    info3 ? <>  <div className='rounded py-1 px-2' style={{ border: "1px solid #ffbf00" }}>
+                                    info3 ? <>  <div className='rounded py-1 px-2' style={{ border: "1px solid #0a86c4" }}>
                                         <p className='font_size mb-0'>4 star  player shall <br />split the daily <br />pool daily</p>
                                     </div></> : ""
                                 }
@@ -304,7 +304,7 @@ function Stack_re() {
                         </div>
                     </div>
                 </div>
-                
+
                 {/* <div className="row mt-5 justify-content-center">
                     <div className="col-lg-8">
                         <div className="card stack_re_card">
