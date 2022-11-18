@@ -32,21 +32,21 @@ function Withdraw_m(props) {
 
 
                 let reward_info = await financeAppcontractOf.methods.rewardInfo(acc).call();
-                
+
                 let capitals = web3.utils.fromWei(reward_info.capitals)
                 let reward_info_static = reward_info.statics
-                let freez1 = (parseInt(web3.utils.fromWei(reward_info_static)) * 25 / 100)
-                let freez2 = (parseInt(web3.utils.fromWei(reward_info.directs)) + parseInt(web3.utils.fromWei(reward_info.level4Released)) + parseInt(web3.utils.fromWei(reward_info.level5Released)) + parseInt(web3.utils.fromWei(reward_info.luck)) + parseInt(web3.utils.fromWei(reward_info.top))) * 25 / 100
+                let freez1 = (parseInt(web3.utils.fromWei(reward_info_static)) * 30 / 100)
+                let freez2 = (parseInt(web3.utils.fromWei(reward_info.directs)) + parseInt(web3.utils.fromWei(reward_info.level4Released)) + parseInt(web3.utils.fromWei(reward_info.level5Released)) + parseInt(web3.utils.fromWei(reward_info.luck)) + parseInt(web3.utils.fromWei(reward_info.top))) * 30 / 100
                 let all_val = (parseInt(web3.utils.fromWei(reward_info.directs)) + parseInt(web3.utils.fromWei(reward_info.level4Released)) + parseInt(web3.utils.fromWei(reward_info.level5Released)) + parseInt(web3.utils.fromWei(reward_info.luck)) + parseInt(web3.utils.fromWei(reward_info.top)))
-                all_val = all_val * 75 / 100
-              
+                all_val = all_val * 70 / 100
 
-                reward_info_static = web3.utils.fromWei(reward_info_static) * 75 / 100
+
+                reward_info_static = web3.utils.fromWei(reward_info_static) * 70 / 100
                 let avail_withdrw = (reward_info_static + all_val)
                 avail_withdrw = parseInt(capitals) + parseInt(avail_withdrw)
                 setAvailableWithdraw(Number(avail_withdrw).toFixed(2))
 
-            
+
 
 
                 obj['directs'] = web3.utils.fromWei(reward_info.directs)
@@ -136,7 +136,7 @@ function Withdraw_m(props) {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
-                                    <p className='text-white'>5-25 level</p>
+                                    <p className='text-white'>5-20 level</p>
                                     <p className='witddraw_p'>{rewardinfo.level5Freezed} DAI</p>
                                 </div>
                             </div>
