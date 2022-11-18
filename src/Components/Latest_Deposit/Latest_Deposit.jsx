@@ -156,7 +156,7 @@ function Latest_Deposit() {
 
 			<h3 className='text-white pstartt mb-3'>Latest Deposit</h3>
 			<RepetationComponent />
-			<div className="main_deposit my-5">
+			<div className="main_deposit mt-5">
 				<div className="second_deposit" style={{ height: "500px", overflowY: "auto" }}>
 					<div className="fi_line">
 						<p>Latest Depositors</p>
@@ -172,6 +172,7 @@ function Latest_Deposit() {
 					/>
 					</div> : <>
 						{
+
 							rewardInfo && rewardInfo.slice(0, 10).map((item, index) => {
 								return (
 									<div className="first_line">

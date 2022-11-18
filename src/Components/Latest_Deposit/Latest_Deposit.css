@@ -35,9 +35,9 @@
     color: #3E6FFB;
 }
 
-.main_latest_deposite{
-     background-color: #02121D !important;
-     height: 100vh;
+.main_latest_deposite {
+    background-color: #02121D !important;
+    height: auto;
 }
 
 .hdFSN {
@@ -133,7 +133,7 @@
 .second_deposit {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .first_line {

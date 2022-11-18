@@ -143,7 +143,7 @@ function Deposite_m(props) {
                     </div>
                 </Modal.Body>
                 <Modal.Footer className='footer_m_bg'>
-                    <Button className='s_d_Ws  w-100' onClick={() => { confirmDeposit() }}>{loader ? <ReactLoading type="spin" color="#ffffff" className='mb-2 mx-auto' height={30} width={30} /> : "Cofirm"} </Button>
+                    <Button className='s_d_Ws  w-100' onClick={() => { confirmDeposit() }}>{loader ? <ReactLoading type="spin" color="#ffffff" className='mb-2 mx-auto' height={30} width={30} /> : "Confirm"} </Button>
                 </Modal.Footer>
             </Modal>
         </div>
