@@ -37,13 +37,16 @@ function Withdraw_m(props) {
                 let reward_info_static = reward_info.statics
                 let freez1 = (parseInt(web3.utils.fromWei(reward_info_static)) * 30 / 100)
                 let freez2 = (parseInt(web3.utils.fromWei(reward_info.directs)) + parseInt(web3.utils.fromWei(reward_info.level4Released)) + parseInt(web3.utils.fromWei(reward_info.level5Released)) + parseInt(web3.utils.fromWei(reward_info.luck)) + parseInt(web3.utils.fromWei(reward_info.top))) * 30 / 100
-                let all_val = (parseInt(web3.utils.fromWei(reward_info.directs)) + parseInt(web3.utils.fromWei(reward_info.level4Released)) + parseInt(web3.utils.fromWei(reward_info.level5Released)) + parseInt(web3.utils.fromWei(reward_info.luck)) + parseInt(web3.utils.fromWei(reward_info.top)))
+                let all_val = (parseInt(web3.utils.fromWei(reward_info.directs)) + parseInt(web3.utils.fromWei(reward_info.level4Released)) + parseInt(web3.utils.fromWei(reward_info.level5Released)) + parseInt(web3.utils.fromWei(reward_info.luck)) + parseInt(web3.utils.fromWei(reward_info.top)) + parseInt(web3.utils.fromWei(reward_info.star)))
                 all_val = all_val * 70 / 100
 
 
                 reward_info_static = web3.utils.fromWei(reward_info_static) * 70 / 100
+
                 let avail_withdrw = (reward_info_static + all_val)
-                avail_withdrw = parseInt(capitals) + parseInt(avail_withdrw)
+
+                avail_withdrw = Number(capitals) + Number(avail_withdrw)
+
                 setAvailableWithdraw(Number(avail_withdrw).toFixed(2))
 
 
@@ -128,7 +131,7 @@ function Withdraw_m(props) {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
-                                    <p className='text-white'>2-4 level</p>
+                                    <p className='text-white'>2-5 level</p>
                                     <p className='witddraw_p'>{rewardinfo.level4Released} DAI</p>
                                 </div>
                             </div>
@@ -136,7 +139,7 @@ function Withdraw_m(props) {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
-                                    <p className='text-white'>5-20 level</p>
+                                    <p className='text-white'>6-25 level</p>
                                     <p className='witddraw_p'>{rewardinfo.level5Freezed} DAI</p>
                                 </div>
                             </div>
