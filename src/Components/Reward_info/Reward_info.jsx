@@ -69,7 +69,7 @@ function Reward_info() {
 								<div className="first_line" key={index}>
 									<div className="nill">{index + 1} <span className='ms-2 me-2'>|</span><span className='spn'> {item.adress}</span></div>
 
-									<div className='group_img'>	<img src="Group.png" alt="" /> {item.value} DAI</div>
+									<div className='group_img'>	<img src="Group.png" alt="" /> {item.value} WUSDT</div>
 								</div>
 							)
 						})

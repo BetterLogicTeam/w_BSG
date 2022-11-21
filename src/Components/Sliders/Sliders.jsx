@@ -77,7 +77,7 @@ function Sliders() {
                             <p className="s_c_p mb-1">Raised Ammount</p>
                             <h6 className="sli_h">
                               <span className="color_s">5000</span> /{" "}
-                              <span>15000 DAI</span>
+                              <span>15000 WUSDT</span>
                             </h6>
                             <div className="sli_pro">
                               <div className="pro_bar"></div>
@@ -123,7 +123,7 @@ function Sliders() {
                             <p className="s_c_p mb-1">Raised Ammount</p>
                             <h6 className="sli_h">
                               <span className="color_s">5000</span> /{" "}
-                              <span>15000 DAI</span>
+                              <span>15000 WUSDT</span>
                             </h6>
                             <div className="sli_pro">
                               <div className="pro_bar"></div>
@@ -169,7 +169,7 @@ function Sliders() {
                             <p className="s_c_p mb-1">Raised Ammount</p>
                             <h6 className="sli_h">
                               <span className="color_s">5000</span> /{" "}
-                              <span>15000 DAI</span>
+                              <span>15000 WUSDT</span>
                             </h6>
                             <div className="sli_pro">
                               <div className="pro_bar"></div>
@@ -215,7 +215,7 @@ function Sliders() {
                             <p className="s_c_p mb-1">Raised Ammount</p>
                             <h6 className="sli_h">
                               <span className="color_s">5000</span> /{" "}
-                              <span>15000 DAI</span>
+                              <span>15000 WUSDT</span>
                             </h6>
                             <div className="sli_pro">
                               <div className="pro_bar"></div>
@@ -287,7 +287,7 @@ function Sliders() {
                             <p className="s_c_p mb-1">Raised Ammount</p>
                             <h6 className="sli_h">
                               <span className="color_s">5000</span> /{" "}
-                              <span>15000 DAI</span>
+                              <span>15000 WUSDT</span>
                             </h6>
                             <div className="sli_pro">
                               <div className="pro_bar"></div>
@@ -331,7 +331,7 @@ function Sliders() {
                             <p className="s_c_p mb-1">Raised Ammount</p>
                             <h6 className="sli_h">
                               <span className="color_s">5000</span> /{" "}
-                              <span>15000 DAI</span>
+                              <span>15000 WUSDT</span>
                             </h6>
                             <div className="sli_pro">
                               <div className="pro_bar"></div>
@@ -375,7 +375,7 @@ function Sliders() {
                             <p className="s_c_p mb-1">Raised Ammount</p>
                             <h6 className="sli_h">
                               <span className="color_s">5000</span> /{" "}
-                              <span>15000 DAI</span>
+                              <span>15000 WUSDT</span>
                             </h6>
                             <div className="sli_pro">
                               <div className="pro_bar"></div>
@@ -419,7 +419,7 @@ function Sliders() {
                             <p className="s_c_p mb-1">Raised Ammount</p>
                             <h6 className="sli_h">
                               <span className="color_s">5000</span> /{" "}
-                              <span>15000 DAI</span>
+                              <span>15000 WUSDT</span>
                             </h6>
                             <div className="sli_pro">
                               <div className="pro_bar"></div>

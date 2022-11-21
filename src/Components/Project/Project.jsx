@@ -17,7 +17,7 @@ function Project() {
                   </div>
                   <div className="pro_con">
                     <h4 className='pro_h4'>1st level</h4>
-                    {/* <p>PRICE (TCT) = 0.59 DAI</p> */}
+                    {/* <p>PRICE (TCT) = 0.59 WUSDT</p> */}
                   </div>
 
                 </div>
@@ -51,7 +51,7 @@ function Project() {
                   </div>
                   <div className="pro_con">
                     <h4 className='pro_h4'>2nd level</h4>
-                    {/* <p>PRICE (TCT) = 0.59 DAI</p> */}
+                    {/* <p>PRICE (TCT) = 0.59 WUSDT</p> */}
                   </div>
 
                 </div>
@@ -85,7 +85,7 @@ function Project() {
                   </div>
                   <div className="pro_con">
                     <h4 className='pro_h4'>3rd level</h4>
-                    {/* <p>PRICE (TCT) = 0.59 DAI</p> */}
+                    {/* <p>PRICE (TCT) = 0.59 WUSDT</p> */}
                   </div>
 
                 </div>
@@ -119,7 +119,7 @@ function Project() {
                   </div>
                   <div className="pro_con">
                     <h4 className='pro_h4'>4th level</h4>
-                    {/* <p>PRICE (TCT) = 0.59 DAI</p> */}
+                    {/* <p>PRICE (TCT) = 0.59 WUSDT</p> */}
                   </div>
 
                 </div>
@@ -153,7 +153,7 @@ function Project() {
                   </div>
                   <div className="pro_con">
                     <h4 className='pro_h4'>5th level</h4>
-                    {/* <p>PRICE (TCT) = 0.59 DAI</p> */}
+                    {/* <p>PRICE (TCT) = 0.59 WUSDT</p> */}
                   </div>
 
                 </div>
@@ -187,7 +187,7 @@ function Project() {
                   </div>
                   <div className="pro_con">
                     <h4 className='pro_h4'>6th level</h4>
-                    {/* <p>PRICE (TCT) = 0.59 DAI</p> */}
+                    {/* <p>PRICE (TCT) = 0.59 WUSDT</p> */}
                   </div>
 
                 </div>
@@ -221,7 +221,7 @@ function Project() {
                   </div>
                   <div className="pro_con">
                     <h4 className='pro_h4'>7th level</h4>
-                    {/* <p>PRICE (TCT) = 0.59 DAI</p> */}
+                    {/* <p>PRICE (TCT) = 0.59 WUSDT</p> */}
                   </div>
 
                 </div>
@@ -255,7 +255,7 @@ function Project() {
                   </div>
                   <div className="pro_con">
                     <h4 className='pro_h4'>8th level to 15 level</h4>
-                    {/* <p>PRICE (TCT) = 0.59 DAI</p> */}
+                    {/* <p>PRICE (TCT) = 0.59 WUSDT</p> */}
                   </div>
 
                 </div>
@@ -289,7 +289,7 @@ function Project() {
                   </div>
                   <div className="pro_con">
                     <h4 className='pro_h4'>8th level to 15 level</h4>
-                    // <p>PRICE (TCT) = 0.59 DAI</p>
+                    // <p>PRICE (TCT) = 0.59 WUSDT</p>
                   </div>
 
                 </div>
@@ -323,7 +323,7 @@ function Project() {
                   </div>
                   <div className="pro_con">
                     <h4 className='pro_h4'>16th level to 25th level</h4>
-                    {/* <p>PRICE (TCT) = 0.59 DAI</p> */}
+                    {/* <p>PRICE (TCT) = 0.59 WUSDT</p> */}
                   </div>
 
                 </div>

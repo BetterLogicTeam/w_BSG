@@ -337,7 +337,7 @@ function Stack_re() {
 
                                 <div className='claim_amount' >
                                     Amount  &nbsp;&nbsp;
-                                    {userfee_Amount} DAI
+                                    {userfee_Amount} WUSDT
                                 </div>
                                 {
                                     info3 ? <>  <div className='rounded py-1 px-2' style={{ border: "1px solid #ffbf00" }}>

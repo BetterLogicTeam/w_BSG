@@ -26,8 +26,8 @@ function Start() {
             </div>
             <h4 className='beni_h4 sh'>1.Deposit
             </h4>
-            <p className='text-white'>Minimum 50 DAI,
-              maximum 10,000 DAI,
+            <p className='text-white'>Minimum 50 WUSDT,
+              maximum 10,000 WUSDT,
               in multiples of 50, the
               amount of each
               deposit must be

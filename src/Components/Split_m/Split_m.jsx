@@ -93,7 +93,7 @@ function Split_m(props) {
                 {/* <div className="container">
                   <div className="row">
                     <div className="col-lg-12">
-                      <p className='mb-0 text-white pb-2'>DAI</p>
+                      <p className='mb-0 text-white pb-2'>WUSDT</p>
                       <input type="text" value={stdAmount}
                         disabled={amount.toString().length > 0 || recieverAdress.toString().length > 0}
                         onChange={changeValue} className='w-100 input_modal'
@@ -114,7 +114,7 @@ function Split_m(props) {
                     <div className="col-lg-4">
                       <div className="d-flex gsaa">
                         <div>
-                          <p className='input_sub_p asasaa ' style={{ color: "#0a86c4" }} >{getsplit_Value} DAI</p>
+                          <p className='input_sub_p asasaa ' style={{ color: "#0a86c4" }} >{getsplit_Value} WUSDT</p>
                         </div>
                       </div>
                     </div>
@@ -136,7 +136,7 @@ function Split_m(props) {
                   {/* <div className="container">
                   <div className="row">
                     <div className="col-lg-12">
-                      <p className='mb-0 text-white pb-2'>DAI</p>
+                      <p className='mb-0 text-white pb-2'>WUSDT</p>
                       <input type="text" value={stdAmount}
                         disabled={amount.toString().length > 0 || recieverAdress.toString().length > 0}
                         onChange={changeValue} className='w-100 input_modal'
@@ -157,7 +157,7 @@ function Split_m(props) {
                       <div className="col-lg-4">
                         <div className="d-flex gsaa">
                           <div>
-                            <p className='input_sub_p asasaa ' >{getsplit_Value} DAI</p>
+                            <p className='input_sub_p asasaa ' >{getsplit_Value} WUSDT</p>
                           </div>
                         </div>
                       </div>

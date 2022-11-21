@@ -104,13 +104,13 @@ function Deposite_m(props) {
                         <div className="row">
                             <div className="col-lg-8">
                                 <input type="number" min="50" max="2000" value={amount} onChange={deposit} className='input_modal' placeholder='50' />
-                                <p className='modal_pa'>Minimum deposit 50 DAI. A ratio of 50 max 2000</p>
+                                <p className='modal_pa'>Minimum deposit 50 WUSDT. A ratio of 50 max 2000</p>
                             </div>
                             <div className="col-lg-4">
                                 <div className="d-flex gsa mt-2">
                                     <img src={m1} className='w-50' alt="" />
                                     {/* <div>
-                                        <p className='input_sub_p asasaa'>DAI</p>
+                                        <p className='input_sub_p asasaa'>WUSDT</p>
                                     </div> */}
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ function Deposite_m(props) {
                                 <div className="card modal_sub_card">
                                     <div className="row sasaasa ">
                                         <div className="col-lg-4 col-4">
-                                            <p className='text-white mb-0'>{amount} DAI</p>
+                                            <p className='text-white mb-0'>{amount} WUSDT</p>
                                             <p className='sub_para'>Deposit</p>
                                         </div>
                                         <div className="col-lg-4 col-4">
@@ -130,7 +130,7 @@ function Deposite_m(props) {
                                             <p className='sub_para'>Each cycle</p>
                                         </div>
                                         <div className="col-lg-4 col-4">
-                                            <p className='text-white mb-0 res_fs'>{depositandintrest} DAI</p>
+                                            <p className='text-white mb-0 res_fs'>{depositandintrest} WUSDT</p>
                                             <p className='sub_para res_fs'>Deposit and interest</p>
                                         </div>
 

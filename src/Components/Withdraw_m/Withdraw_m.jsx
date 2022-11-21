@@ -38,30 +38,40 @@ function Withdraw_m(props) {
                 let freez1 = (parseInt(web3.utils.fromWei(reward_info_static)) * 30 / 100)
                 let freez2 = (parseInt(web3.utils.fromWei(reward_info.directs)) + parseInt(web3.utils.fromWei(reward_info.level4Released)) + parseInt(web3.utils.fromWei(reward_info.level5Released)) + parseInt(web3.utils.fromWei(reward_info.luck)) + parseInt(web3.utils.fromWei(reward_info.top))) * 30 / 100
                 let all_val = (parseInt(web3.utils.fromWei(reward_info.directs)) + parseInt(web3.utils.fromWei(reward_info.level4Released)) + parseInt(web3.utils.fromWei(reward_info.level5Released)) + parseInt(web3.utils.fromWei(reward_info.luck)) + parseInt(web3.utils.fromWei(reward_info.top)) + parseInt(web3.utils.fromWei(reward_info.star)))
-                all_val = all_val * 70 / 100
+                all_val = all_val
 
-
-                reward_info_static = web3.utils.fromWei(reward_info_static) * 70 / 100
-
-                let avail_withdrw = (reward_info_static + all_val)
-
+                reward_info_static = web3.utils.fromWei(reward_info_static)
+              
+               
+                  let  avail_withdrw = (reward_info_static + all_val)
+                    
+                
+                  console.log("all_val", reward_info_static);
+                
                 avail_withdrw = Number(capitals) + Number(avail_withdrw)
 
                 setAvailableWithdraw(Number(avail_withdrw).toFixed(2))
+                let FlushRecords = await financeAppcontractOf.methods.FlushRecords(acc).call();
+                FlushRecords = FlushRecords.totalFlush
+                // console.log("FlushRecords",FlushRecords);
+                FlushRecords = web3.utils.fromWei(FlushRecords)
+
 
 
 
 
                 obj['directs'] = web3.utils.fromWei(reward_info.directs)
                 obj['statics'] = Number(web3.utils.fromWei(reward_info.statics)).toFixed(2)
-                obj['capitals'] = Number(reward_info_static + all_val).toFixed(2)
-                obj['level4Released'] = Number(web3.utils.fromWei(reward_info.level4Released)).toFixed(2)
+                obj['capitals'] = Number( all_val ==0 ?  reward_info_static :reward_info_static + all_val).toFixed(2)
+                obj['level4Released'] = Number(  web3.utils.fromWei(reward_info.level4Released)).toFixed(2)
                 obj['level5Freezed'] = Number(web3.utils.fromWei(reward_info.level5Freezed)).toFixed(2)
                 obj['level4Freezed'] = Number(freez1 + freez2).toFixed(2)
                 obj['luck'] = Number(web3.utils.fromWei(reward_info.luck)).toFixed(2)
                 obj['star'] = Number(web3.utils.fromWei(reward_info.star)).toFixed(2)
                 obj['top'] = Number(web3.utils.fromWei(reward_info.top)).toFixed(2)
                 obj['unlock'] = Number(capitals).toFixed(2)
+                obj['FlushRecords'] = Number(FlushRecords).toFixed(2)
+
 
                 setRewardInfo(obj)
 
@@ -108,7 +118,7 @@ function Withdraw_m(props) {
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
                                     <p className='text-white'>Unlock principal</p>
-                                    <p className='witddraw_p'>{rewardinfo.unlock} DAI</p>
+                                    <p className='witddraw_p'>{rewardinfo.unlock} WUSDT</p>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +126,7 @@ function Withdraw_m(props) {
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
                                     <p className='text-white'>Cycle reward</p>
-                                    <p className='witddraw_p'>{rewardinfo.statics} DAI</p>
+                                    <p className='witddraw_p'>{rewardinfo.statics} WUSDT</p>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +134,7 @@ function Withdraw_m(props) {
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
                                     <p className='text-white'>1st level</p>
-                                    <p className='witddraw_p'>{rewardinfo.capitals} DAI</p>
+                                    <p className='witddraw_p'>{rewardinfo.capitals} WUSDT</p>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +142,7 @@ function Withdraw_m(props) {
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
                                     <p className='text-white'>2-5 level</p>
-                                    <p className='witddraw_p'>{rewardinfo.level4Released} DAI</p>
+                                    <p className='witddraw_p'>{rewardinfo.level4Released} WUSDT</p>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +150,7 @@ function Withdraw_m(props) {
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
                                     <p className='text-white'>6-25 level</p>
-                                    <p className='witddraw_p'>{rewardinfo.level5Freezed} DAI</p>
+                                    <p className='witddraw_p'>{rewardinfo.level5Freezed} WUSDT</p>
                                 </div>
                             </div>
                         </div>
@@ -148,7 +158,7 @@ function Withdraw_m(props) {
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
                                     <p className='text-white'>Freezing</p>
-                                    <p className='witddraw_p'>{rewardinfo.level4Freezed} DAI</p>
+                                    <p className='witddraw_p'>{rewardinfo.level4Freezed} WUSDT</p>
                                 </div>
                             </div>
                         </div>
@@ -156,23 +166,40 @@ function Withdraw_m(props) {
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
                                     <p className='text-white'>Lucky reward</p>
-                                    <p className='witddraw_p'>{rewardinfo.luck} DAI</p>
+                                    <p className='witddraw_p'>{rewardinfo.luck} WUSDT</p>
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
-                                    <p className='text-white'>4 star reward</p>
-                                    <p className='witddraw_p'>{rewardinfo.star} DAI</p>
+                                    <p className='text-white'> Diamand</p>
+                                    <p className='witddraw_p'>{rewardinfo.star} WUSDT</p>
                                 </div>
                             </div>
                         </div>
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="d-flex justify-content-between">
+                                    <p className='text-white'> Double Diamand</p>
+                                    <p className='witddraw_p'>{rewardinfo.star} WUSDT</p>
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
                                     <p className='text-white'>Top player reward</p>
-                                    <p className='witddraw_p'>{rewardinfo.top} DAI</p>
+                                    <p className='witddraw_p'>{rewardinfo.top} WUSDT</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="d-flex justify-content-between">
+                                    <p className='text-white'> Flush Amount</p>
+                                    <p className='witddraw_p'>{rewardinfo.FlushRecords} WUSDT</p>
                                 </div>
                             </div>
                         </div>
@@ -186,7 +213,7 @@ function Withdraw_m(props) {
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
                                     <p className='text-white'>Available withdrawal</p>
-                                    <p className='witddraw_p'>{available_withdraw} DAI</p>
+                                    <p className='witddraw_p'>{available_withdraw} WUSDT</p>
                                 </div>
                             </div>
                         </div>

@@ -217,7 +217,7 @@ function Register(props, getAccount) {
                         <div className="row">
                             <div className="col-lg-8">
                                 <input type="text" placeholder='Enter Address' value={regisdterAdress} onChange={(e) => { setRegisdterAdress(e.target.value) }} className='input_modal' />
-                                {/* <input type="text" placeholder='Enter amount in Dai' value={amount} onChange={(e) => { setAmount(e.target.value) }} className='input_modal mt-3' /> */}
+                                {/* <input type="text" placeholder='Enter amount in WUSDT' value={amount} onChange={(e) => { setAmount(e.target.value) }} className='input_modal mt-3' /> */}
 
                             </div>
 

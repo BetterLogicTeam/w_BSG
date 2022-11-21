@@ -183,7 +183,7 @@ function Latest_Deposit() {
 
 										<span><Moment format="D MMM YYYY hh:mm:ss a" unix >{`${item.userinfos}`}</Moment></span>
 
-										<div className='group_img '><img src={m1} className='' alt="" width="15%" />&nbsp;&nbsp; &nbsp; {item.amount} &nbsp;DAI</div>
+										<div className='group_img '><img src={m1} className='' alt="" width="15%" />&nbsp;&nbsp; &nbsp; {item.amount} &nbsp;WUSDT</div>
 									</div>)
 
 							})}</>}
@@ -193,61 +193,61 @@ function Latest_Deposit() {
 					{/* <div className="first_line">
 						<span className='spn'>Nill</span>
 						<span>...</span>
-						<div className='group_img'>	<img src="Group.png" alt="" />DAI</div>
+						<div className='group_img'>	<img src="Group.png" alt="" />WUSDT</div>
 					</div>
 
 					<div className="first_line">
 						<span className='spn'>Nill</span>
 						<span>...</span>
-						<div className='group_img'>	<img src="Group.png" alt="" />DAI</div>
+						<div className='group_img'>	<img src="Group.png" alt="" />WUSDT</div>
 					</div>
 
 					<div className="first_line">
 						<span className='spn'>Nill</span>
 						<span>...</span>
-						<div className='group_img'>	<img src="Group.png" alt="" />DAI</div>
+						<div className='group_img'>	<img src="Group.png" alt="" />WUSDT</div>
 					</div>
 
 					<div className="first_line">
 						<span className='spn'>Nill</span>
 						<span>...</span>
-						<div className='group_img'>	<img src="Group.png" alt="" />DAI</div>
+						<div className='group_img'>	<img src="Group.png" alt="" />WUSDT</div>
 					</div>
 
 					<div className="first_line">
 						<span className='spn'>Nill</span>
 						<span>...</span>
-						<div className='group_img'>	<img src="Group.png" alt="" />DAI</div>
+						<div className='group_img'>	<img src="Group.png" alt="" />WUSDT</div>
 					</div>
 
 					<div className="first_line">
 						<span className='spn'>Nill</span>
 						<span>...</span>
-						<div className='group_img'>	<img src="Group.png" alt="" />DAI</div>
+						<div className='group_img'>	<img src="Group.png" alt="" />WUSDT</div>
 					</div>
 
 					<div className="first_line">
 						<span className='spn'>Nill</span>
 						<span>...</span>
-						<div className='group_img'>	<img src="Group.png" alt="" />DAI</div>
+						<div className='group_img'>	<img src="Group.png" alt="" />WUSDT</div>
 					</div>
 
 					<div className="first_line">
 						<span className='spn'>Nill</span>
 						<span>...</span>
-						<div className='group_img'>	<img src="Group.png" alt="" />DAI</div>
+						<div className='group_img'>	<img src="Group.png" alt="" />WUSDT</div>
 					</div>
 
 					<div className="first_line">
 						<span className='spn'>Nill</span>
 						<span>...</span>
-						<div className='group_img'>	<img src="Group.png" alt="" />DAI</div>
+						<div className='group_img'>	<img src="Group.png" alt="" />WUSDT</div>
 					</div>
 
 					<div className="last_line">
 						<span className='spn'>Nill</span>
 						<span>...</span>
-						<div className='group_img'>	<img src="Group.png" alt="" />DAI</div>
+						<div className='group_img'>	<img src="Group.png" alt="" />WUSDT</div>
 					</div> */}
 				</div>
 			</div>
