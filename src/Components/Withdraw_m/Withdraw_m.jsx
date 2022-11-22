@@ -51,6 +51,7 @@ function Withdraw_m(props) {
                 avail_withdrw = Number(capitals) + Number(avail_withdrw)
 
                 setAvailableWithdraw(Number(avail_withdrw).toFixed(2))
+                
                 let FlushRecords = await financeAppcontractOf.methods.FlushRecords(acc).call();
                 FlushRecords = FlushRecords.totalFlush
                 // console.log("FlushRecords",FlushRecords);
