@@ -46,8 +46,11 @@ function Withdraw_m(props) {
 
                 let all_val = (parseInt(web3.utils.fromWei(reward_info.directs)) + parseInt(web3.utils.fromWei(reward_info.level4Released)) + parseInt(web3.utils.fromWei(reward_info.level5Released)) + parseInt(web3.utils.fromWei(reward_info.luck)) + parseInt(web3.utils.fromWei(reward_info.top)) + parseInt(web3.utils.fromWei(reward_info.star)))
                 all_val = all_val
+                let value_1stlevel = (parseInt(web3.utils.fromWei(reward_info.directs)))
+
 
                 reward_info_static = web3.utils.fromWei(reward_info_static)
+
 
                 let avail_withdrw = (Number(reward_info_static) + Number(all_val))
                 let one_percent = Number(avail_withdrw) * 10 / 100
@@ -67,7 +70,9 @@ function Withdraw_m(props) {
 
                 obj['directs'] = web3.utils.fromWei(reward_info.directs)
                 obj['statics'] = Number(web3.utils.fromWei(reward_info.statics)).toFixed(2)
-                obj['capitals'] = Number(all_val == 0 ? reward_info_static : reward_info_static + all_val).toFixed(2)
+                // obj['capitals'] = Number(all_val == 0 ? reward_info_static : Number(reward_info_static) + Number(value_1stlevel)).toFixed(2)
+                obj['capitals'] = Number(Number(value_1stlevel)).toFixed(2)
+
                 obj['level4Released'] = Number(web3.utils.fromWei(reward_info.level4Released)).toFixed(2)
                 obj['level5Freezed'] = Number(web3.utils.fromWei(reward_info.level5Freezed)).toFixed(2)
                 obj['level4Freezed'] = Number(totalFreezd).toFixed(2)

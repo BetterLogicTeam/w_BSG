@@ -30,13 +30,13 @@ function Stack_income() {
       const web3 = window.web3;
       let financeAppcontractOf = new web3.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
       let depostTime = await financeAppcontractOf.methods.getCurDay().call();
-      
+
       setdepositTime(depostTime)
       let startTime = await financeAppcontractOf.methods.startTime().call();
       setUnixTime(startTime)
     } catch (e) {
       // toast.error(e.message);
-      console.log("Error While Get ",e.message);
+      console.log("Error While Get ", e.message);
     }
 
   }
@@ -55,7 +55,7 @@ function Stack_income() {
       if (getOrderLength > 0) {
         getOrderLength = getOrderLength - 1
 
-        console.log("order",orderInfos);
+        console.log("order", orderInfos);
         let orderInfos = await financeAppcontractOf.methods.orderInfos(acc, getOrderLength).call();
 
         // let FinalTime= Number(orderInfos.unfreeze) - Number(orderInfos.start) 
@@ -111,12 +111,12 @@ function Stack_income() {
 
   useEffect(() => {
     getDetail()
-    let id=setInterval(() => {
+    let id = setInterval(() => {
       getDeposit_time()
     }, 1000);
     return () => {
       clearInterval(id)
-  }
+    }
   }, []);
 
   return (
@@ -130,8 +130,8 @@ function Stack_income() {
                   <MdLocationOn className='icon_color fs-3'></MdLocationOn>
                 </div>
                 <div>
-                  <p className='stack_p width_adjust'>Contract address: <a href={`https://mumbai.polygonscan.com/address/${financeAppContractAddress}`} className="stack_p" target="_blank">{financeAppContractAddress} </a></p>
-                  <p className='stack_p width_adjust2'>Contract address: <a href={`https://mumbai.polygonscan.com/address/${financeAppContractAddress}`} className="stack_p" target="_blank" >{(financeAppContractAddress?.substring(0, 4) + "..." + financeAppContractAddress?.substring(financeAppContractAddress?.length - 4))}</a></p>
+                  <p className='stack_p width_adjust'>Contract address: <a href={`https://testnet.bscscan.com//address/${financeAppContractAddress}`} className="stack_p" target="_blank">{financeAppContractAddress} </a></p>
+                  <p className='stack_p width_adjust2'>Contract address: <a href={`https://testnet.bscscan.com//address/${financeAppContractAddress}`} className="stack_p" target="_blank" >{(financeAppContractAddress?.substring(0, 4) + "..." + financeAppContractAddress?.substring(financeAppContractAddress?.length - 4))}</a></p>
                   {/* <p className=' aliment width_adjust2'>{refrealAdress?.substring(0,8) + "..." + refrealAdress?.substring(refrealAdress?.length -8)}</p> */}
                 </div>
               </div>
