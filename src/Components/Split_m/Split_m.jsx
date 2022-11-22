@@ -48,6 +48,8 @@ function Split_m(props) {
         let financeAppcontractOf = new web3.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
         let getCurSplit = await financeAppcontractOf.methods.getCurSplit(acc).call();
         getCurSplit = web3.utils.fromWei(getCurSplit)
+        // alert(getCurSplit)
+
         getCurSplit = parseFloat(getCurSplit).toFixed(2)
         setgetsplit_Value(getCurSplit)
       }

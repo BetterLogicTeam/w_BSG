@@ -32,26 +32,30 @@ function Withdraw_m(props) {
 
 
                 let reward_info = await financeAppcontractOf.methods.rewardInfo(acc).call();
-
+                // console.log('reward_info', reward_info)
                 let capitals = web3.utils.fromWei(reward_info.capitals)
                 let reward_info_static = reward_info.statics
-                let freez1 = (parseInt(web3.utils.fromWei(reward_info_static)) * 30 / 100)
-                let freez2 = (parseInt(web3.utils.fromWei(reward_info.directs)) + parseInt(web3.utils.fromWei(reward_info.level4Released)) + parseInt(web3.utils.fromWei(reward_info.level5Released)) + parseInt(web3.utils.fromWei(reward_info.luck)) + parseInt(web3.utils.fromWei(reward_info.top))) * 30 / 100
+                let userInfo = await financeAppcontractOf.methods.userInfo(acc).call();
+                let totalFreezd = web3.utils.fromWei(userInfo.totalFreezed)
+                // console.log('userInfo', totalFreezd)
+
+
+                // let freez1=
+                // let freez1 = (parseInt(web3.utils.fromWei(reward_info_static)))
+                // let freez2 = (parseInt(web3.utils.fromWei(reward_info.directs)) + parseInt(web3.utils.fromWei(reward_info.level4Released)) + parseInt(web3.utils.fromWei(reward_info.level5Released)) + parseInt(web3.utils.fromWei(reward_info.luck)) + parseInt(web3.utils.fromWei(reward_info.top)))
+
                 let all_val = (parseInt(web3.utils.fromWei(reward_info.directs)) + parseInt(web3.utils.fromWei(reward_info.level4Released)) + parseInt(web3.utils.fromWei(reward_info.level5Released)) + parseInt(web3.utils.fromWei(reward_info.luck)) + parseInt(web3.utils.fromWei(reward_info.top)) + parseInt(web3.utils.fromWei(reward_info.star)))
                 all_val = all_val
 
                 reward_info_static = web3.utils.fromWei(reward_info_static)
-              
-               
-                  let  avail_withdrw = (reward_info_static + all_val)
-                    
-                
-                  console.log("all_val", reward_info_static);
-                
-                avail_withdrw = Number(capitals) + Number(avail_withdrw)
+
+                let avail_withdrw = (Number(reward_info_static) + Number(all_val))
+                let one_percent = Number(avail_withdrw) * 10 / 100
+                // console.log("all_val", reward_info_static);
+                avail_withdrw = (Number(capitals) + Number(avail_withdrw))
 
                 setAvailableWithdraw(Number(avail_withdrw).toFixed(2))
-                
+
                 let FlushRecords = await financeAppcontractOf.methods.FlushRecords(acc).call();
                 FlushRecords = FlushRecords.totalFlush
                 // console.log("FlushRecords",FlushRecords);
@@ -63,10 +67,10 @@ function Withdraw_m(props) {
 
                 obj['directs'] = web3.utils.fromWei(reward_info.directs)
                 obj['statics'] = Number(web3.utils.fromWei(reward_info.statics)).toFixed(2)
-                obj['capitals'] = Number( all_val ==0 ?  reward_info_static :reward_info_static + all_val).toFixed(2)
-                obj['level4Released'] = Number(  web3.utils.fromWei(reward_info.level4Released)).toFixed(2)
+                obj['capitals'] = Number(all_val == 0 ? reward_info_static : reward_info_static + all_val).toFixed(2)
+                obj['level4Released'] = Number(web3.utils.fromWei(reward_info.level4Released)).toFixed(2)
                 obj['level5Freezed'] = Number(web3.utils.fromWei(reward_info.level5Freezed)).toFixed(2)
-                obj['level4Freezed'] = Number(freez1 + freez2).toFixed(2)
+                obj['level4Freezed'] = Number(totalFreezd).toFixed(2)
                 obj['luck'] = Number(web3.utils.fromWei(reward_info.luck)).toFixed(2)
                 obj['star'] = Number(web3.utils.fromWei(reward_info.star)).toFixed(2)
                 obj['top'] = Number(web3.utils.fromWei(reward_info.top)).toFixed(2)
@@ -150,7 +154,7 @@ function Withdraw_m(props) {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
-                                    <p className='text-white'>6-25 level</p>
+                                    <p className='text-white'>6-20 level</p>
                                     <p className='witddraw_p'>{rewardinfo.level5Freezed} WUSDT</p>
                                 </div>
                             </div>
@@ -166,19 +170,19 @@ function Withdraw_m(props) {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
-                                    <p className='text-white'>Lucky reward</p>
+                                    <p className='text-white'>Diamond</p>
                                     <p className='witddraw_p'>{rewardinfo.luck} WUSDT</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="row">
+                        {/* <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
                                     <p className='text-white'> Diamand</p>
                                     <p className='witddraw_p'>{rewardinfo.star} WUSDT</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
