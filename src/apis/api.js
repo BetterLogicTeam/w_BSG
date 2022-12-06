@@ -7,7 +7,7 @@ const networks = {
     nativeCurrency: {
       name: "binance",
       symbol: "BNB",
-      decimals: 18,
+      decimals: 303,
     },
     rpcUrls: [
       "https://data-seed-prebsc-1-s1.binance.org:8545"
@@ -58,7 +58,7 @@ export const loadWeb3 = async () => {
       await window.ethereum.enable();
       await window.web3.eth.getChainId((err, netId) => {
         switch (netId.toString()) {
-          case "97":
+          case "303":
             isItConnected = true;
             break;
           default:
